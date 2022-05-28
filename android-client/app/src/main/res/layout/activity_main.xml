@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/mBtnConnect"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_walletconnect_background"
+        android:padding="12dp"
+        android:src="@drawable/ic_walletconnect" />
+
+    <LinearLayout
+        android:id="@+id/mLlConnectedUI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mTvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="address" />
+
+        <TextView
+            android:id="@+id/mTvChainId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="chainId" />
+
+        <Button
+            android:id="@+id/mBtnDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="disconnect"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Actions"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mBtnSendTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="eth_sendTransaction"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnSignTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="eth_signTransaction"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnSignTypedData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="eth_signTypedData"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="eth_sign"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnPersonalSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="personal_sign"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</FrameLayout>
