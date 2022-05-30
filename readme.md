@@ -1,6 +1,6 @@
-# wallet-connect-example for ioPay Wallet
+# WalletConnect Client Examples for ioPay Wallet
 
-This repo has the following client samples
+This repo has the following client examples
 1. Android 
 2. iOS (working in progress)
 
