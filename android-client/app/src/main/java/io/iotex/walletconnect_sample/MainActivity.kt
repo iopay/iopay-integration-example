@@ -81,19 +81,19 @@ class MainActivity : AppCompatActivity() {
             val from = address
             val to = address
 
-            val rawNonce = HttpManager.getAccountNonce(address, chainId) ?: return@launch
-            val nonce =  Numeric.prependHexPrefix(BigInteger(rawNonce.toString()).toString(16))
+//            val rawNonce = HttpManager.getAccountNonce(address, chainId) ?: return@launch
+//            val nonce =  Numeric.prependHexPrefix(BigInteger(rawNonce.toString()).toString(16))
+//
+//            val rawGasPrice = HttpManager.getGasPrices()?.slow?.price ?: return@launch
+//            val gasPrice = Numeric.prependHexPrefix(BigInteger(rawGasPrice.toString()).times(BigInteger.TEN.pow(9)).toString())
+////
+//            val gasLimit = Numeric.prependHexPrefix(BigInteger("21000").toString(16))
 
-            val rawGasPrice = HttpManager.getGasPrices()?.slow?.price ?: return@launch
-            val gasPrice = Numeric.prependHexPrefix(BigInteger(rawGasPrice.toString()).times(BigInteger.TEN.pow(9)).toString())
-
-            val gasLimit = Numeric.prependHexPrefix(BigInteger("21000").toString(16))
-
-            val value = "0"
+            val value = "0.1"
 
             val data = "0x"
 
-            val response = WalletConnector.sendTransaction(from, value, data, nonce, gasPrice, gasLimit)
+            val response = WalletConnector.sendTransaction(from, value, data)
             "response : $response".i()
         }
     }
