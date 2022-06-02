@@ -12,10 +12,10 @@ object WalletConnector : Session.Callback {
     private val config by lazy {
         WalletConnectKitConfig(
             context = Utils.getApp(),
-            bridgeUrl = "wss://bridge.aktionariat.com:8887",
-            appUrl = "walletconnectkit.com",
-            appName = "WalletConnect Kit",
-            appDescription = "This is the Swiss Army toolkit for WalletConnect!"
+            bridgeUrl = "https://bridge.walletconnect.org",
+            appUrl = "https://github.com/iotexproject/wallect-connect-example",
+            appName = "WalletConnect Sample",
+            appDescription = ""
         )
     }
     private val walletConnectKit by lazy { WalletConnectKit.Builder(config).build() }
