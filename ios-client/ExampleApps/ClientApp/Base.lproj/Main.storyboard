@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,12 +11,12 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ClientExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOi-xs-2vS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOi-xs-2vS">
                                 <rect key="frame" x="117" y="433" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connect to WalletConnect"/>
@@ -26,8 +25,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,65 +36,73 @@
         <!--Actions View Controller-->
         <scene sceneID="qZi-N0-UMu">
             <objects>
-                <viewController storyboardIdentifier="ActionsViewController" id="7xL-3o-hMB" customClass="ActionsViewController" customModule="ClientExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActionsViewController" id="7xL-3o-hMB" customClass="ActionsViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wj-pM-Kad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aL3-e6-BJu">
-                                <rect key="frame" x="30" y="305" width="354" height="296"/>
+                                <rect key="frame" x="30" y="286" width="354" height="334"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXl-u2-jdF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXl-u2-jdF">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
                                         <state key="normal" title="personal_sign"/>
                                         <connections>
                                             <action selector="personal_sign:" destination="7xL-3o-hMB" eventType="touchUpInside" id="Q0t-3v-BYO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgi-1Q-frM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgi-1Q-frM">
                                         <rect key="frame" x="0.0" y="38" width="354" height="30"/>
                                         <state key="normal" title="eth_sign"/>
                                         <connections>
                                             <action selector="eth_sign:" destination="7xL-3o-hMB" eventType="touchUpInside" id="8fR-Qw-zHZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f71-0S-8wh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f71-0S-8wh">
                                         <rect key="frame" x="0.0" y="76" width="354" height="30"/>
                                         <state key="normal" title="eth_signTypedData"/>
                                         <connections>
                                             <action selector="eth_signTypedData:" destination="7xL-3o-hMB" eventType="touchUpInside" id="z8H-Sx-6eZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-bo-sXW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-bo-sXW">
                                         <rect key="frame" x="0.0" y="114" width="354" height="30"/>
                                         <state key="normal" title="eth_sendTransaction"/>
                                         <connections>
                                             <action selector="eth_sendTransaction:" destination="7xL-3o-hMB" eventType="touchUpInside" id="UNz-SF-8gC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45K-HD-CJS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45K-HD-CJS">
                                         <rect key="frame" x="0.0" y="152" width="354" height="30"/>
                                         <state key="normal" title="eth_signTransaction"/>
                                         <connections>
                                             <action selector="eth_signTransaction:" destination="7xL-3o-hMB" eventType="touchUpInside" id="DFf-k5-sFH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSu-RP-v7j">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSu-RP-v7j">
                                         <rect key="frame" x="0.0" y="190" width="354" height="30"/>
                                         <state key="normal" title="eth_sendRawTransaction"/>
                                         <connections>
                                             <action selector="eth_sendRawTransaction:" destination="7xL-3o-hMB" eventType="touchUpInside" id="F03-dQ-wfW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvZ-Yb-Poa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvZ-Yb-Poa">
                                         <rect key="frame" x="0.0" y="228" width="354" height="30"/>
                                         <state key="normal" title="Custom Request (eth_gasPrice)"/>
                                         <connections>
                                             <action selector="customRequest:" destination="7xL-3o-hMB" eventType="touchUpInside" id="vdn-jd-xft"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YQ-sx-7O5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMe-pe-fMC">
                                         <rect key="frame" x="0.0" y="266" width="354" height="30"/>
+                                        <state key="normal" title="Custom contract method call"/>
+                                        <connections>
+                                            <action selector="customContractMethodCall:" destination="7xL-3o-hMB" eventType="touchUpInside" id="UxW-AD-AF4"/>
+                                            <action selector="customRequest:" destination="7xL-3o-hMB" eventType="touchUpInside" id="yba-aC-yKW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YQ-sx-7O5">
+                                        <rect key="frame" x="0.0" y="304" width="354" height="30"/>
                                         <state key="normal" title="Disconnect"/>
                                         <connections>
                                             <action selector="disconnect:" destination="7xL-3o-hMB" eventType="touchUpInside" id="DoH-P9-Q79"/>
@@ -103,7 +110,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Css-VY-BfZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Css-VY-BfZ">
                                 <rect key="frame" x="187.5" y="792" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
@@ -111,6 +118,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="LRc-Yy-Ycj"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aL3-e6-BJu" firstAttribute="centerX" secondItem="LRc-Yy-Ycj" secondAttribute="centerX" id="WeY-kt-RHm"/>
@@ -120,7 +128,6 @@
                             <constraint firstItem="LRc-Yy-Ycj" firstAttribute="trailing" secondItem="aL3-e6-BJu" secondAttribute="trailing" constant="30" id="yEi-id-ySU"/>
                             <constraint firstItem="aL3-e6-BJu" firstAttribute="centerY" secondItem="LRc-Yy-Ycj" secondAttribute="centerY" id="yLa-85-eVl"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LRc-Yy-Ycj"/>
                     </view>
                     <connections>
                         <outlet property="disconnectButton" destination="3YQ-sx-7O5" id="DxP-ya-x6Y"/>
@@ -140,7 +147,7 @@
         <!--Handshake View Controller-->
         <scene sceneID="otl-I3-kin">
             <objects>
-                <viewController storyboardIdentifier="HandshakeViewController" id="B71-mD-uD6" customClass="HandshakeViewController" customModule="ClientExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HandshakeViewController" id="B71-mD-uD6" customClass="HandshakeViewController" customModule="ClientApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jp4-cK-P3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +164,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtu-zo-xrG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtu-zo-xrG">
                                 <rect key="frame" x="187.5" y="792" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
@@ -165,6 +172,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zss-nD-HCR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CQh-db-IrS" firstAttribute="top" secondItem="Dpw-rb-jfm" secondAttribute="bottom" constant="12" id="64E-Iv-r1h"/>
@@ -176,7 +184,6 @@
                             <constraint firstItem="Dpw-rb-jfm" firstAttribute="leading" secondItem="Zss-nD-HCR" secondAttribute="leading" constant="12" id="dEc-rc-XTM"/>
                             <constraint firstItem="CQh-db-IrS" firstAttribute="centerX" secondItem="Jp4-cK-P3v" secondAttribute="centerX" id="mJG-er-3JE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Zss-nD-HCR"/>
                     </view>
                     <connections>
                         <outlet property="qrCodeImageView" destination="CQh-db-IrS" id="MQj-6q-MSy"/>
